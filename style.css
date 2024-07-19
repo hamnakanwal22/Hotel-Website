@@ -436,10 +436,198 @@ background-image: url(images/counter-bg.webp);
     color: var(--text-white);
     border: .0625rem solid var(--bg-white)
 }
+.gallery-item {
+    box-shadow: 0 0 .1875rem rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item:before,
+.gallery-item:after,
+.gallery-item .gallery-item-content:before,
+.gallery-item .gallery-item-content:after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.gallery-item:after {
+    top: 50%;
+}
+
+.gallery-item:hover:after {
+    top: 0;
+    opacity: 1;
+}
+
+.gallery-item:hover:before {
+    left: 50%;
+    opacity: 1;
+}
+
+.gallery-item .gallery-item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.gallery-item:hover .gallery-item-content {
+    opacity: 1;
+}
+
+.gallery-item .gallery-item-content:before,
+.gallery-item .gallery-item-content:after {
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+
+.gallery-item:hover .gallery-item-content:before {
+    top: 50%;
+    opacity: 1;
+}
+
+.gallery-item .gallery-item-content:after {
+    top: 50%;
+}
+
+.gallery-item:hover .gallery-item-content:after {
+    left: 0;
+    opacity: 1;
+}
+.price_wrapper .card {
+    box-shadow: 0 .125rem .25rem rgb(34 30 31 / 40%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.price_wrapper .card:hover {
+    background-color: var(--secondary-color);
+}
+
+.price_wrapper .card:hover h3,
+.price_wrapper .card:hover h5,
+.price_wrapper .card:hover p {
+    color: var(--text-white);
+}
+
+.price_wrapper .card:hover .main-btn {
+    color: var(--text-white);
+    border-color: var(--bg-white);
+}
+.blog-content {
+    margin: -5rem 0 0 4.375rem;
+    box-shadow: 0 .125rem .25rem rgb(34 30 31 / 40%);
+}
+
+.our-partner-slider {
+    background-color: var(--bg-color);
+    padding: 3.125rem 0;
+}
+.swiper-wrapper{
+    gap:60px;
+}
+.footer_wrapper {
+    background-color: var(--bg-black);
+}
+
+.footer_wrapper h5 {
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+}
+
+.footer_wrapper ul li {
+    margin-bottom: .5rem;
+    list-style: none;
+}
+
+.footer_wrapper .contact-info li a{
+    color: var(--secondary-color)
+}
+
+.footer_wrapper .link-widget li a,
+.footer_wrapper p {
+    color: var(--text-gray);
+    font-size: .875rem;
+    padding-left:1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.footer_wrapper .link-widget li a::before {
+    content: '\f105';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footer_wrapper .link-widget li a:hover {
+    margin-left: .625rem;
+    color: var(--secondary-text);
+}
+
+.footer_wrapper .social-network a {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    margin: .5rem;
+    line-height:2rem;
+    font-size: .875rem;
+    display: inline-block;
+    border: .125rem solid var(--text-gray);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer_wrapper .social-network a:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+    box-shadow: 0 .625rem .9375rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-0.1875rem);
+}
+
+.footer_wrapper .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.footer_wrapper .copyright-section {
+    background-color: var(--primary-color);
+    padding: 1.25rem 0 .3125rem;
+    text-align: center;
+}
 
 
-
-
+.footer_wrapper .copyright-section a {
+    color: var(--secondary-text);
+}
+.footer_wrapper .form-control::placeholder{
+    color:White;
+}
 
 
 
